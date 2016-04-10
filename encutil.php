@@ -25,8 +25,7 @@
  *          php encutil.php --decrypt --keyfile secret-key.txt ciphertext.bin plaintext.txt
  */
 
-// FIXME: pull it in using composer, or check in a .phar
-require_once '../../autoload.php';
+require_once 'vendor/autoload.php';
 
 use Defuse\Crypto\Exception as Ex;
 use Defuse\Crypto\File;
