@@ -1,0 +1,16 @@
+{
+    "name":         "defuse/encutil",
+    "description":  "Command-line file encryption tool",
+    "license":      "MIT",
+    "version":      "0.1.0",
+    "authors":      [
+        {
+            "name":  "Taylor Hornby",
+            "email": "taylor@defuse.ca"
+        }
+    ],
+    "require": {
+        "php":                   ">=5.4.0",
+        "defuse/php-encryption": "~2.0"
+    }
+}
