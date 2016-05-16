@@ -11,6 +11,7 @@
     ],
     "require": {
         "php":                   ">=5.4.0",
-        "defuse/php-encryption": "~2.0"
+        "defuse/php-encryption": "~2.0",
+        "seld/cli-prompt": "^1.0"
     }
 }

@@ -36,18 +36,36 @@ class Prompt
 {
     public static function PromptForPasswordAndVerify()
     {
-        return "FIXME!";
+        echo "Password: ";
+        $pass1 = Seld\CliPrompt\CliPrompt::hiddenPrompt();
+        echo "Enter it again: ";
+        $pass2 = Seld\CliPrompt\CliPrompt::hiddenPrompt();
+        while ($pass1 !== $pass2) {
+            echo "The passwords didn't match. Try again.";
+            echo "Password: ";
+            $pass1 = Seld\CliPrompt\CliPrompt::hiddenPrompt();
+            echo "Enter it again: ";
+            $pass2 = Seld\CliPrompt\CliPrompt::hiddenPrompt();
+        }
+        return $pass1;
     }
 
     public static function PromptForPassword()
     {
-        return "FIXME!";
+        echo "Password: ";
+        return Seld\CliPrompt\CliPrompt::hiddenPrompt();
     }
 
     public static function PromptYesNo($question)
     {
-        // FIXME
-        return true;
+        echo $question . " [y/n]? ";
+        $response = \Seld\CliPrompt\CliPrompt::prompt();
+        while ($response !== "y" && $response !== "n") {
+            echo "Please answer 'y' or 'n'.\n";
+            echo $question . " [y/n]? ";
+            $response = \Seld\CliPrompt\CliPrompt::prompt();
+        }
+        return $response === "y";
     }
 }
 
